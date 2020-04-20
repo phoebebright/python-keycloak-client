@@ -2,9 +2,9 @@ from unittest import TestCase
 
 import mock
 
-from keycloak.openid_connect import KeycloakOpenidConnect
-from keycloak.realm import KeycloakRealm
-from keycloak.well_known import KeycloakWellKnown
+from keycloakclient.openid_connect import KeycloakOpenidConnect
+from keycloakclient.realm import KeycloakRealm
+from keycloakclient.well_known import KeycloakWellKnown
 
 
 class KeycloakOpenidConnectTestCase(TestCase):
@@ -37,7 +37,7 @@ class KeycloakOpenidConnectTestCase(TestCase):
         self.assertIsInstance(well_known, KeycloakWellKnown)
         self.assertEqual(well_known, self.openid_client.well_known)
 
-    @mock.patch('keycloak.openid_connect.jwt')
+    @mock.patch('keycloakclient.openid_connect.jwt')
     def test_decode_token(self, patched_jwt):
         self.openid_client.decode_token(token='test-token', key='test-key')
         patched_jwt.decode.assert_called_once_with('test-token', 'test-key',

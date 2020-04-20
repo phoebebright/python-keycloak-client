@@ -2,9 +2,9 @@ from unittest import TestCase
 
 import mock
 
-from keycloak.admin import KeycloakAdmin
-from keycloak.admin.realm import Realms
-from keycloak.realm import KeycloakRealm
+from keycloakclient.admin import KeycloakAdmin
+from keycloakclient.admin.realm import Realms
+from keycloakclient.realm import KeycloakRealm
 
 
 class KeycloakAdminTestCase(TestCase):

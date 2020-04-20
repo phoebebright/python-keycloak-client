@@ -5,7 +5,7 @@ try:
 except ImportError:
     aiohttp = None
 else:
-    from keycloak.aio.client import KeycloakClient
+    from keycloakclient.aio.client import KeycloakClient
 
 
 @asynctest.skipIf(aiohttp is None, 'aiohttp is not installed')

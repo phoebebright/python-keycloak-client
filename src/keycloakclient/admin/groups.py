@@ -1,6 +1,6 @@
 import json
 
-from keycloak.admin import KeycloakAdminBase
+from keycloakclient.admin import KeycloakAdminBase
 
 __all__ = ('Groups',)
 

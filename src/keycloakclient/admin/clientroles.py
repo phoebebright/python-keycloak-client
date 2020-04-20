@@ -1,7 +1,7 @@
 import json
 from collections import OrderedDict
 
-from keycloak.admin import KeycloakAdminBase
+from keycloakclient.admin import KeycloakAdminBase
 
 ROLE_KWARGS = [
     'description',

@@ -2,8 +2,8 @@ from unittest import TestCase
 
 import mock
 
-from keycloak.admin import KeycloakAdmin
-from keycloak.realm import KeycloakRealm
+from keycloakclient.admin import KeycloakAdmin
+from keycloakclient.realm import KeycloakRealm
 
 
 class KeycloakAdminUsersTestCase(TestCase):
@@ -84,7 +84,7 @@ class KeycloakAdminUsersTestCase(TestCase):
             }
         )
 
-    @mock.patch('keycloak.admin.users.User.user', {"id": "user-id"})
+    @mock.patch('keycloakclient.admin.users.User.user', {"id": "user-id"})
     def test_update(self):
         user = self.admin.realms.by_name('realm-name').users.by_id("user-id")
         user.update(
@@ -117,7 +117,7 @@ class KeycloakAdminUsersTestCase(TestCase):
             }
         )
 
-    @mock.patch('keycloak.admin.users.User.user', {"id": "user-id"})
+    @mock.patch('keycloakclient.admin.users.User.user', {"id": "user-id"})
     def test_delete(self):
         user = self.admin.realms.by_name('realm-name').users.by_id("user-id")
         user.delete()
@@ -132,7 +132,7 @@ class KeycloakAdminUsersTestCase(TestCase):
             }
         )
 
-    @mock.patch('keycloak.admin.users.User.user', {"id": "user-id"})
+    @mock.patch('keycloakclient.admin.users.User.user', {"id": "user-id"})
     def test_delete_group(self):
         user = self.admin.realms.by_name('realm-name').users.by_id("user-id")
         user.groups.delete('group-id')
@@ -147,7 +147,7 @@ class KeycloakAdminUsersTestCase(TestCase):
             }
         )
 
-    @mock.patch('keycloak.admin.users.User.user', {"id": "user-id"})
+    @mock.patch('keycloakclient.admin.users.User.user', {"id": "user-id"})
     def test_reset_password(self):
         user = self.admin.realms.by_name('realm-name').users.by_id("user-id")
         user.reset_password("password", True)

@@ -5,12 +5,12 @@ try:
 except ImportError:
     aiohttp = None
 else:
-    from keycloak.admin import KeycloakAdmin
-    from keycloak.aio.authz import KeycloakAuthz
-    from keycloak.aio.client import KeycloakClient
-    from keycloak.aio.openid_connect import KeycloakOpenidConnect
-    from keycloak.aio.uma import KeycloakUMA
-    from keycloak.aio.realm import KeycloakRealm
+    from keycloakclient.admin import KeycloakAdmin
+    from keycloakclient.aio.authz import KeycloakAuthz
+    from keycloakclient.aio.client import KeycloakClient
+    from keycloakclient.aio.openid_connect import KeycloakOpenidConnect
+    from keycloakclient.aio.uma import KeycloakUMA
+    from keycloakclient.aio.realm import KeycloakRealm
 
 
 async def wraps_awaitable(return_value):
@@ -98,7 +98,7 @@ class KeycloakRealmTestCase(asynctest.TestCase):
         Case: Admin client get requested
         Expected: Admin client get returned
         """
-        with asynctest.patch('keycloak.realm.KeycloakAdmin',
+        with asynctest.patch('keycloakclient.realm.KeycloakAdmin',
                              autospec=True) as mocked_admin_client:
             async with self.realm:
                 admin_client = self.realm.admin
@@ -110,7 +110,7 @@ class KeycloakRealmTestCase(asynctest.TestCase):
         Case: Authz client get requested
         Expected: Authz client get returned
         """
-        with asynctest.patch('keycloak.aio.realm.KeycloakAuthz',
+        with asynctest.patch('keycloakclient.aio.realm.KeycloakAuthz',
                              autospec=True) as mocked_authz_client:
             async with self.realm:
                 authz_client = self.realm.authz(client_id='client-id')
@@ -126,7 +126,7 @@ class KeycloakRealmTestCase(asynctest.TestCase):
         Case: UMA client get requested
         Expected: UMA client get returned
         """
-        with asynctest.patch('keycloak.aio.realm.KeycloakUMA',
+        with asynctest.patch('keycloakclient.aio.realm.KeycloakUMA',
                              autospec=True) as mocked_uma_client:
             async with self.realm:
                 uma_client = self.realm.uma()

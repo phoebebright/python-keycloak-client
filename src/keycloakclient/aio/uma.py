@@ -1,5 +1,5 @@
-from keycloak.aio.mixins import WellKnownMixin
-from keycloak.uma import KeycloakUMA as SyncKeycloakUMA, PATH_WELL_KNOWN
+from keycloakclient.aio.mixins import WellKnownMixin
+from keycloakclient.uma import KeycloakUMA as SyncKeycloakUMA, PATH_WELL_KNOWN
 
 __all__ = (
     'KeycloakUMA',

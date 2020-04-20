@@ -3,7 +3,7 @@ from unittest import TestCase
 import mock
 from requests import Session
 
-from keycloak.client import KeycloakClient
+from keycloakclient.client import KeycloakClient
 
 
 class KeycloakClientTestCase(TestCase):
@@ -58,7 +58,7 @@ class KeycloakClientTestCase(TestCase):
                                                   'https://another_url.com'),
                          'https://another_url.com/some/path')
 
-    @mock.patch('keycloak.client.requests', autospec=True)
+    @mock.patch('keycloakclient.client.requests', autospec=True)
     def test_post(self, request_mock):
         """
         Case: A POST request get executed
@@ -83,7 +83,7 @@ class KeycloakClientTestCase(TestCase):
         )
         self.assertEqual(response, self.client._handle_response.return_value)
 
-    @mock.patch('keycloak.client.requests', autospec=True)
+    @mock.patch('keycloakclient.client.requests', autospec=True)
     def test_get(self, request_mock):
         """
         Case: A GET request get executed
@@ -107,7 +107,7 @@ class KeycloakClientTestCase(TestCase):
         )
         self.assertEqual(response, self.client._handle_response.return_value)
 
-    @mock.patch('keycloak.client.requests', autospec=True)
+    @mock.patch('keycloakclient.client.requests', autospec=True)
     def test_put(self, request_mock):
         """
         Case: A PUT request get executed
@@ -134,7 +134,7 @@ class KeycloakClientTestCase(TestCase):
         self.assertEqual(response,
                          self.client._handle_response.return_value)
 
-    @mock.patch('keycloak.client.requests', autospec=True)
+    @mock.patch('keycloakclient.client.requests', autospec=True)
     def test_delete(self, request_mock):
         """
         Case: A DELETE request get executed

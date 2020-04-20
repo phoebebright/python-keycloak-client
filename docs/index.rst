@@ -40,7 +40,7 @@ Everything starts with an instance of :class:`keycloak.realm.KeycloakRealm`
 
 .. code-block:: python
 
-    from keycloak.realm import KeycloakRealm
+    from keycloakclient.realm import KeycloakRealm
 
 
     realm = KeycloakRealm(server_url='https://example.com', realm_name='my_realm')
@@ -51,7 +51,7 @@ Async
 
 .. code-block:: python3
 
-    from keycloak.aio.realm import KeycloakRealm
+    from keycloakclient.aio.realm import KeycloakRealm
 
 
     async def main(loop=None):
@@ -79,7 +79,7 @@ The OpenID Connect entry point can be retrieved from the realm object.
 
 .. code-block:: python
 
-    from keycloak.realm import KeycloakRealm
+    from keycloakclient.realm import KeycloakRealm
 
 
     realm = KeycloakRealm(server_url='https://example.com', realm_name='my_realm')
@@ -93,7 +93,7 @@ Async
 
 .. code-block:: python3
 
-    from keycloak.aio.realm import KeycloakRealm
+    from keycloakclient.aio.realm import KeycloakRealm
 
 
     async def main(loop=None):
@@ -143,7 +143,7 @@ The Authz client can be retrieved from the realm object.
 
 .. code-block:: python
 
-    from keycloak.realm import KeycloakRealm
+    from keycloakclient.realm import KeycloakRealm
 
 
     realm = KeycloakRealm(server_url='https://example.com', realm_name='my_realm')
@@ -156,7 +156,7 @@ Async
 
 .. code-block:: python3
 
-    from keycloak.aio.realm import KeycloakRealm
+    from keycloakclient.aio.realm import KeycloakRealm
 
 
     async def main(loop=None):
@@ -190,7 +190,7 @@ The admin API client get be retrieved from the realm object.
 
 .. code-block:: python3
 
-    from keycloak.realm import KeycloakRealm
+    from keycloakclient.realm import KeycloakRealm
 
 
     realm = KeycloakRealm(server_url='https://example.com', realm_name='my_realm')
@@ -202,7 +202,7 @@ Async
 
 .. code-block:: python3
 
-    from keycloak.aio.realm import KeycloakRealm
+    from keycloakclient.aio.realm import KeycloakRealm
 
 
     async def main(loop=None):
@@ -293,7 +293,7 @@ http://www.keycloak.org/docs/latest/authorization_services/index.html#_service_o
 
 .. code-block:: python
 
-    from keycloak.realm import KeycloakRealm
+    from keycloakclient.realm import KeycloakRealm
 
 
     realm = KeycloakRealm(server_url='https://example.com', realm_name='my_realm')
@@ -305,7 +305,7 @@ Async
 
 .. code-block:: python3
 
-    from keycloak.aio.realm import KeycloakRealm
+    from keycloakclient.aio.realm import KeycloakRealm
 
 
     async def main(loop=None):

@@ -2,7 +2,7 @@ import logging
 
 from requests.exceptions import HTTPError
 
-from keycloak.exceptions import KeycloakClientError
+from keycloakclient.exceptions import KeycloakClientError
 
 try:
     from urllib.parse import urljoin  # noqa: F401

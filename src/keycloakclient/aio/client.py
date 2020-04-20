@@ -4,9 +4,9 @@ from typing import Any
 
 import aiohttp
 
-from keycloak.aio.abc import AsyncInit
-from keycloak.client import KeycloakClient as SyncKeycloakClient
-from keycloak.exceptions import KeycloakClientError
+from keycloakclient.aio.abc import AsyncInit
+from keycloakclient.client import KeycloakClient as SyncKeycloakClient
+from keycloakclient.exceptions import KeycloakClientError
 
 __all__ = (
     'KeycloakClient',

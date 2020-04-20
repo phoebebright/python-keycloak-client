@@ -1,11 +1,11 @@
 import asyncio
 
-from keycloak.aio.abc import AsyncInit
-from keycloak.aio.authz import KeycloakAuthz
-from keycloak.aio.client import KeycloakClient
-from keycloak.aio.openid_connect import KeycloakOpenidConnect
-from keycloak.aio.uma import KeycloakUMA
-from keycloak.realm import KeycloakRealm as SyncKeycloakRealm
+from keycloakclient.aio.abc import AsyncInit
+from keycloakclient.aio.authz import KeycloakAuthz
+from keycloakclient.aio.client import KeycloakClient
+from keycloakclient.aio.openid_connect import KeycloakOpenidConnect
+from keycloakclient.aio.uma import KeycloakUMA
+from keycloakclient.realm import KeycloakRealm as SyncKeycloakRealm
 
 __all__ = (
     'KeycloakRealm',

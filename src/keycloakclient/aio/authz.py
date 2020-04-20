@@ -1,10 +1,10 @@
-from keycloak.aio.mixins import WellKnownMixin
-from keycloak.authz import (
+from keycloakclient.aio.mixins import WellKnownMixin
+from keycloakclient.authz import (
     KeycloakAuthz as SyncKeycloakAuthz,
     PATH_WELL_KNOWN,
     urlencode,
 )
-from keycloak.exceptions import KeycloakClientError
+from keycloakclient.exceptions import KeycloakClientError
 
 __all__ = (
     'KeycloakAuthz',

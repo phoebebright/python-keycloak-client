@@ -2,8 +2,8 @@ from unittest import TestCase
 
 import mock
 
-from keycloak.authz import KeycloakAuthz
-from keycloak.realm import KeycloakRealm
+from keycloakclient.authz import KeycloakAuthz
+from keycloakclient.realm import KeycloakRealm
 
 
 class KeycloakAuthzTestCase(TestCase):

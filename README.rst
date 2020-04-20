@@ -1,3 +1,6 @@
+This code has been refactored so that the module is now keycloakclient to avoid conflict with the python-keycloak library.
+This library is used by django-keycloak to manage users and the python-keycloak library is used by another module django-rest-framework-keycloak
+
 ======================
 Python Keycloak Client
 ======================

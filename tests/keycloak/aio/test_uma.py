@@ -4,9 +4,9 @@ try:
 except ImportError:
     aiohttp = None
 else:
-    from keycloak.aio.uma import KeycloakUMA
-    from keycloak.aio.realm import KeycloakRealm
-    from keycloak.aio.well_known import KeycloakWellKnown
+    from keycloakclient.aio.uma import KeycloakUMA
+    from keycloakclient.aio.realm import KeycloakRealm
+    from keycloakclient.aio.well_known import KeycloakWellKnown
 
 
 @asynctest.skipIf(aiohttp is None, 'aiohttp is not installed')

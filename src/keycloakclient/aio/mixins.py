@@ -1,6 +1,6 @@
-from keycloak.aio.abc import AsyncInit
-from keycloak.aio.well_known import KeycloakWellKnown
-from keycloak.mixins import WellKnownMixin as SyncWellKnownMixin
+from keycloakclient.aio.abc import AsyncInit
+from keycloakclient.aio.well_known import KeycloakWellKnown
+from keycloakclient.mixins import WellKnownMixin as SyncWellKnownMixin
 
 __all__ = (
     'WellKnownMixin',

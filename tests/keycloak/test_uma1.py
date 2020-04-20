@@ -2,9 +2,9 @@ from unittest import TestCase
 
 import mock
 
-from keycloak.realm import KeycloakRealm
-from keycloak.uma1 import KeycloakUMA1
-from keycloak.well_known import KeycloakWellKnown
+from keycloakclient.realm import KeycloakRealm
+from keycloakclient.uma1 import KeycloakUMA1
+from keycloakclient.well_known import KeycloakWellKnown
 
 
 class KeycloakUma1TestCase(TestCase):

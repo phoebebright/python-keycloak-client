@@ -53,10 +53,10 @@ setup(
         'python-jose',
     ],
     tests_require=TESTS_REQUIRE,
-    url='https://github.com/Peter-Slump/python-keycloak-client',
+    url='https://github.com/phoebebright/python-keycloak-client',
     license='MIT',
     author='Peter Slump',
     author_email='peter@yarf.nl',
-    description='Install Python Keycloak client.',
+    description='Install Python Keycloak client  - hacked to prevent conflict with python-keycloak library.',
     classifiers=[]
 )

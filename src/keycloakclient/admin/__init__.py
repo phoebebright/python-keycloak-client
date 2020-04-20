@@ -55,7 +55,7 @@ class KeycloakAdmin(object):
 
     @property
     def realms(self):
-        from keycloak.admin.realm import Realms
+        from keycloakclient.admin.realm import Realms
         return Realms(client=self)
 
     def post(self, url, data, headers=None, **kwargs):

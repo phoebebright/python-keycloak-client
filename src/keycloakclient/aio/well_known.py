@@ -1,6 +1,6 @@
 import asyncio
 
-from keycloak.aio.abc import AsyncInit
+from keycloakclient.aio.abc import AsyncInit
 from ..well_known import KeycloakWellKnown as SyncKeycloakWellKnown
 
 __all__ = (
